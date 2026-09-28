@@ -1,0 +1,48 @@
+{
+  "name": "@huabuyu233/edgit",
+  "version": "0.2.1",
+  "description": "GitHub 仓库镜像加速克隆工具 —— 镜像加速 git clone 与 Release 下载，探测命中后自动还原 remote，对 git 零侵入",
+  "keywords": [
+    "git",
+    "github",
+    "clone",
+    "mirror",
+    "proxy",
+    "accelerator",
+    "镜像",
+    "加速",
+    "download",
+    "release"
+  ],
+  "author": "huabuyu233",
+  "license": "CC-BY-NC-4.0",
+  "homepage": "https://github.com/huabuyu233/edgit#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huabuyu233/edgit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/huabuyu233/edgit/issues"
+  },
+  "bin": {
+    "edgit": "bin/edgit.js"
+  },
+  "files": [
+    "bin/",
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "os": [
+    "win32",
+    "darwin",
+    "linux"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ]
+}
