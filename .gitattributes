@@ -1,0 +1,9 @@
+# 统一使用 LF 行尾，避免 Windows 检出 CRLF 导致的虚假文件差异
+* text=auto eol=lf
+
+# 二进制文件不做行尾转换
+*.png binary
+*.jpg binary
+*.exe binary
+*.tgz binary
+dist/** binary
