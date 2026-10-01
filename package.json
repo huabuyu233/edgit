@@ -1,6 +1,6 @@
 {
   "name": "@huabuyu233/edgit",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "GitHub 仓库镜像加速克隆工具 —— 镜像加速 git clone 与 Release 下载，探测命中后自动还原 remote，对 git 零侵入",
   "keywords": [
     "git",

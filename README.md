@@ -112,6 +112,26 @@ edgit mirrors enable gh-proxy.com        # 启用
 edgit mirrors remove gh-proxy.com        # 删除
 ```
 
+## 帮助与自检
+
+忘记命令用法或镜像站挂了时，交互式帮助会先询问意图再给出对应指南：
+
+```bash
+edgit help                # 交互菜单：1 命令用法 / 2 镜像维护指南
+edgit help usage          # 直达命令用法
+edgit help mirrors        # 直达镜像维护指南
+```
+
+自检命令（面向开发者）：先做环境预检（git 必需，docker 缺失则跳过相关测试），再逐项测试
+cli / clone / get / docker / mirrors，失败继续，结束清理全部测试产物（临时目录、配置备份、
+docker 测试镜像）并汇总报告：
+
+```bash
+edgit test                # 测试全部功能
+edgit test clone          # 只测试单项
+edgit test get <url>      # 自定义下载地址
+```
+
 内置镜像按**权威性**排序（知名高校镜像在前，其次经久不衰、社区口碑好的镜像，全部可增删启停）：
 
 | 优先级 | 镜像 | clone | release | 说明 |
