@@ -1,5 +1,5 @@
 # edgit
-1
+
 GitHub 仓库镜像加速克隆工具。一条命令，自动探测可用镜像站并加速 `git clone`，克隆完成后自动还原 remote，日常 `git pull` / `git push` 完全不受影响。
 
 ```bash
