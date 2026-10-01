@@ -11,7 +11,7 @@ import (
 	"time"
 )
 
-const version = "0.3.0"
+const version = "0.3.1"
 
 // main 解析命令行，分发到 clone / get / docker / mirrors / init 子命令。
 func main() {
@@ -30,7 +30,11 @@ func main() {
 		os.Exit(cmdMirrors(os.Args[2:]))
 	case "init":
 		os.Exit(cmdInit(os.Args[2:]))
-	case "help", "-h", "--help":
+	case "test":
+		os.Exit(cmdTest(os.Args[2:]))
+	case "help":
+		os.Exit(cmdHelp(os.Args[2:]))
+	case "-h", "--help":
 		printUsage()
 	case "version", "-v", "--version":
 		fmt.Println("edgit " + version)
@@ -55,8 +59,9 @@ func printUsage() {
   edgit mirrors remove <id>        删除镜像
   edgit mirrors disable <id>       禁用镜像
   edgit mirrors enable <id>        启用镜像
+  edgit test [项]                    自检全部功能（cli/clone/get/docker/mirrors）
   edgit version                    显示版本
-  edgit help                       显示帮助
+  edgit help [usage|mirrors]       交互式帮助（命令用法 / 镜像维护指南）
 
 说明:
   仅 github.com 的 HTTPS/SSH 地址走镜像加速，其他地址原样透传给 git clone。
